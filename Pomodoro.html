@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta charset="UTF-8"/>
+<script src="jquery.js"></script>
+<title> Pomodoro Clock </title>
+<style>
+div {
+background: #f9f9f9 none repeat scroll 0 0;
+	border: 1px solid #CCC; 
+	width: 25px;
+	height:25px;
+    font-size: 120%;
+    margin-bottom: 1em;
+    padding: 5px;
+    width: auto;
+	background-color: powder blue;
+	border-color: green;
+    border-width: 10px;
+    border-style: solid;
+	border-radius: 25px;
+}
+.numberCircle {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+    border-color: green;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+
+    font: 32px Arial, sans-serif;
+}
+
+</style>
+</head>
+<body> 
+<div id='BreakSession'>
+<label> Break Session
+<button id='plusBreak' type='button'> + </button>
+</label>  
+<input id='enterB' type="text" value='5' name="breakSession">
+<button id='minusBreak' type='button'> - </button>
+
+
+<label> Session Time 
+<button id='plusSession' type='button' > + </button>
+</label>
+<input id='enterSession' type='text' value= '25' name='Session'></input> 
+<button id='minusSession' type='button'> - </button>
+</div>
+<script type="text/javascript" src="Pomodoro.js"></script>
+<button onclick='initiateSession()'> Session <span class='numberCircle'> 0:05</span> </button>
+</body>
+</html>
